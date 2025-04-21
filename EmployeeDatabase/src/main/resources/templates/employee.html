@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>employee page</title>
+<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+		crossorigin="anonymous">
+		
+<style>
+	.result-page{
+	width: 650px;
+	height: 270px;
+	position: absolute;
+	background-image: url('https://img.freepik.com/free-vector/stylish-white-background-with-diagonal-lines_1017-33199.jpg?w=826&t=st=1674736520~exp=1674737120~hmac=2ce4bb958e726dcbd8d3a340121031ea1130933af568a5a1505788e87eefa53c');;
+	border-radius: 15px;
+	color: black;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	}
+	body {
+    background-image: url('https://wallpapers.com/images/hd/plain-black-wood-texture-epyoq62xu9f92b9i.webp');
+    color: #FFFFFF;
+	}
+	.header{
+	background-image: url('https://img.freepik.com/free-vector/stylish-white-background-with-diagonal-lines_1017-33199.jpg?w=826&t=st=1674736520~exp=1674737120~hmac=2ce4bb958e726dcbd8d3a340121031ea1130933af568a5a1505788e87eefa53c');;
+	color: black;
+	height: 80px;
+	}
+</style>
+</head>
+<body>
+			<div class="header">
+			<div class="p-2 mb-2">
+				<div class="row g-3">
+				<div class="col-sm-1">
+			    <a href="/index"><img src="https://static.vecteezy.com/system/resources/thumbnails/000/627/703/small/illust58-6618-01.jpg" alt="home-logo" width="40px" height="40px"/></a>
+			  	<p>home</p>
+			  	</div>
+			  	<div class="col-sm-10">
+			    <i><h2>Employee Database</h2></i>
+			    <i><p>designed & devloped by : Bhanu Pratap</p></i>
+			  	</div>
+			  	<div class="col-sm-1">
+			    <a href="/adminlogin"><img src="https://cdn.pixabay.com/photo/2013/07/13/13/38/man-161282__340.png" alt="home-logo" width="40px" height="42px"/></a>
+			    <p>admin</p>
+			  	</div>
+				</div>
+			</div>
+			</div>
+			<div class="result-page">
+			<div class="container-fluid">
+			<ins><h4 class="text-center" style="color:orange;">Employee Information</h4></ins>
+			<br>
+			<div class="row g-3">
+				<div class="col-sm-4">
+			    <p>Employee Name: </p>
+			  	</div>
+			  	<div class="col-sm">
+			    <b th:text="${empl.employee_name}"></b>
+			  	</div>
+			</div>
+			<div class="row g-3">
+				<div class="col-sm-4">
+			    <p>Employee ID: </p>
+			  	</div>
+			  	<div class="col-sm">
+			    <b th:text="${empl.emp_id}"></b>
+			  	</div>
+			</div>
+			<div class="row g-3">
+				<div class="col-sm-4">
+			    <p>Project: </p>
+			  	</div>
+			  	<div class="col-sm">
+			    <b th:text="${empl.project}"></b>
+			  	</div>
+			</div>
+			<div class="row g-3">
+				<div class="col-sm-4">
+			    <p>Mobile no: </p>
+			  	</div>
+			  	<div class="col-sm">
+			    <b th:text="${empl.mobile}"></b>
+			  	</div>
+			</div>
+			<div class="row g-3">
+				<div class="col-sm-4">
+			    <p>Location: </p>
+			  	</div>
+			  	<div class="col-sm">
+			    <b th:text="${empl.location}"></b>
+			  	</div>
+			</div>
+			</div>
+			</div>
+</body>
+</html>
